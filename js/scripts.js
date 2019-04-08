@@ -11,3 +11,11 @@ document.querySelector(".btn-roll").addEventListener("click", function() {
     // result rounded to integer
     var diceDom = document.querySelector(".dice");
     diceDom.style.display = "block";
+
+    // refresh if value is 1
+        if (dice !== 1) {
+          // Add Score
+          roundScore += dice;
+          document.querySelector(
+            "#current-" + activePlayer
+          ).textContent = roundScore;
