@@ -11,23 +11,23 @@ document.querySelector(".btn-roll").addEventListener("click", function() {
     // result rounded to integer
     var diceDom = document.querySelector(".dice");
     diceDom.style.display = "block";
+    
 
     // refresh if value is 1
-        if (dice !== 1) {
-          // Add Score
-          roundScore += dice;
-          document.querySelector(
-            "#current-" + activePlayer
-          ).textContent = roundScore;
-
-        } else {
-    // Next player
-    nextPlayer();
+    if (dice !== 1) {
+      // Add Score
+      roundScore += dice;
+      document.querySelector(
+        "#current-" + activePlayer
+      ).textContent = roundScore;
+    } else {
+      // Next player
+      nextPlayer();
+    }
   }
-}
 });
 
-/Hold button instructions
+//Hold button instructions
 
 document.querySelector(".btn-hold").addEventListener("click", function() {
   if (gamePlaying) {
@@ -38,7 +38,7 @@ document.querySelector(".btn-hold").addEventListener("click", function() {
     document.querySelector("#score-" + activePlayer).textContent =
       scores[activePlayer];
 
-      // Declaration of the winner
+    // Declaration of the winner
     if (scores[activePlayer] >= 100) {
       document.querySelector("#name-" + activePlayer).textContent = "Winner!";
       document.querySelector(".dice").style.display = "none";
