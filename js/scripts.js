@@ -26,3 +26,14 @@ document.querySelector(".btn-roll").addEventListener("click", function() {
   }
 }
 });
+
+/Hold button instructions
+
+document.querySelector(".btn-hold").addEventListener("click", function() {
+  if (gamePlaying) {
+    //  Add current score to global score
+    scores[activePlayer] += roundScore;
+
+    // Refresh after hold
+    document.querySelector("#score-" + activePlayer).textContent =
+      scores[activePlayer];
