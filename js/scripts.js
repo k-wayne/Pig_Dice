@@ -19,3 +19,10 @@ document.querySelector(".btn-roll").addEventListener("click", function() {
           document.querySelector(
             "#current-" + activePlayer
           ).textContent = roundScore;
+
+        } else {
+    // Next player
+    nextPlayer();
+  }
+}
+});
